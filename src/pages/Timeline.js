@@ -17,7 +17,7 @@ const Timeline= (props) =>{
     const [visibility, setVisibility]= useState(true)
    
     const onSelect=(topic) =>{
-        database().ref(`${topic}`).off('value');
+        database().ref(`${topicTitle}`).off('value');
         setTopicTitle(topic)
         setVisibility(false)
         database()
